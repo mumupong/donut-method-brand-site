@@ -4,7 +4,7 @@ import { SectionIntro } from "@/components/SectionIntro";
 import {
   founderStory,
   missionStatement,
-  profileParagraphs,
+  profilePageIntro,
   profileSummary
 } from "@/lib/site-data";
 
@@ -13,53 +13,51 @@ export default function ProfilePage() {
     <div className="container page-shell">
       <SectionIntro
         eyebrow="Profile"
-        title="Anna Miyanishiについて"
-        description="プロフィールと、ドーナツメソッドが生まれた背景について。"
+        title="プロフィール"
+        description="ドーナツメソッドを届けている Anna Miyanishi のこと。"
       />
 
-      <section className="profile-page-grid">
+      <section className="profile-hero">
         <div className="profile-photo-panel">
           <Image
             src="/anna-photo.png"
             alt="Anna Miyanishi"
             width={880}
-            height={880}
+            height={1100}
             className="profile-photo large"
           />
         </div>
 
-        <div className="profile-text-panel">
-          <p className="eyebrow">{profileSummary.role}</p>
-          <h2>{profileSummary.name}</h2>
-          {profileParagraphs.map((item) => (
-            <p key={item} className="body-copy">
-              {item}
-            </p>
-          ))}
+        <div className="profile-text-stack">
+          <p className="profile-role">{profileSummary.role}</p>
+          <h1 className="profile-name">{profileSummary.name}</h1>
+          <p className="profile-lead">{profilePageIntro}</p>
         </div>
       </section>
 
-<section className="page-section two-column-grid">
-  <div className="soft-card soft-card-strong">
-    <h2>{founderStory.title}</h2>
-    {founderStory.paragraphs.map((item) => (
-      <p key={item} className="body-copy">
-        {item}
-      </p>
-    ))}
-  </div>
+      <section className="page-section story-grid">
+        <article className="subtle-panel story-card">
+          <h2>{founderStory.title}</h2>
+          <div className="story-copy-group">
+            {founderStory.paragraphs.map((item) => (
+              <p key={item} className="body-copy">
+                {item}
+              </p>
+            ))}
+          </div>
+        </article>
 
-  <div className="soft-card soft-card-strong">
-    <h2>{missionStatement.title}</h2>
-    {missionStatement.paragraphs.map((item) => (
-      <p key={item} className="body-copy">
-        {item}
-      </p>
-    ))}
-  </div>
-</section>
-      
-      
+        <article className="subtle-panel story-card">
+          <h2>{missionStatement.title}</h2>
+          <div className="story-copy-group">
+            {missionStatement.paragraphs.map((item) => (
+              <p key={item} className="body-copy">
+                {item}
+              </p>
+            ))}
+          </div>
+        </article>
+      </section>
     </div>
   );
 }
