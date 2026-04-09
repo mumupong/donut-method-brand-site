@@ -137,10 +137,21 @@ h3 {
 .body-muted,
 .info-list dd,
 .info-list dt,
-.resource-card p,
-.category-card p
-{
+li,
+p {
   font-size: 1rem;
+}
+
+.hero-description,
+.section-description,
+.body-copy,
+.profile-copy,
+.footer-copy,
+.body-muted,
+.info-list dd,
+.info-list dt,
+.resource-card p,
+.category-card p {
   max-width: 72ch;
 }
 
