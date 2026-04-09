@@ -11,8 +11,8 @@ export default function LibraryPage() {
     <div className="container page-shell">
       <SectionIntro
         eyebrow="Library"
-        title="悩みから読む・見る"
-        description="note と YouTube を、悩みのテーマごとに見られるようにしています。媒体で分けるのではなく、いまの自分に必要なテーマから選べる設計です。"
+        title="テーマから探す"
+        description="note と YouTube を、今の悩みや関心に近いテーマ別にまとめています。媒体ではなく、内容から選べる一覧です。"
       />
 
       <section className="page-section">
