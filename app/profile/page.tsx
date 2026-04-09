@@ -1,7 +1,12 @@
 import Image from "next/image";
 
 import { SectionIntro } from "@/components/SectionIntro";
-import { profileParagraphs, profileSummary } from "@/lib/site-data";
+import {
+  founderStory,
+  missionStatement,
+  profileParagraphs,
+  profileSummary
+} from "@/lib/site-data";
 
 export default function ProfilePage() {
   return (
@@ -9,7 +14,7 @@ export default function ProfilePage() {
       <SectionIntro
         eyebrow="Profile"
         title="Anna Miyanishiについて"
-        description="やさしい、静か、知的、あたたかい。押しつけずに、地に足のついた整理を届けるためのプロフィールページです。"
+        description="プロフィールと、ドーナツメソッドが生まれた背景について。"
       />
 
       <section className="profile-page-grid">
@@ -33,6 +38,28 @@ export default function ProfilePage() {
           ))}
         </div>
       </section>
+
+<section className="page-section two-column-grid">
+  <div className="soft-card soft-card-strong">
+    <h2>{founderStory.title}</h2>
+    {founderStory.paragraphs.map((item) => (
+      <p key={item} className="body-copy">
+        {item}
+      </p>
+    ))}
+  </div>
+
+  <div className="soft-card soft-card-strong">
+    <h2>{missionStatement.title}</h2>
+    {missionStatement.paragraphs.map((item) => (
+      <p key={item} className="body-copy">
+        {item}
+      </p>
+    ))}
+  </div>
+</section>
+      
+      
     </div>
   );
 }
