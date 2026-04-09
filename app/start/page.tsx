@@ -2,16 +2,16 @@ import Link from "next/link";
 
 import { CTABox } from "@/components/CTABox";
 import { SectionIntro } from "@/components/SectionIntro";
-import { methodCards, painPoints, sessionConfig, takeaways } from "@/lib/site-data";
+import { methodCards, methodOverview, painPoints, sessionConfig, takeaways } from "@/lib/site-data";
 
 export default function StartPage() {
   return (
     <div className="container page-shell">
       <SectionIntro
-        eyebrow="Start here"
-        title="はじめての方へ"
-        description="このページでは、ドーナツメソッドがどんな人のためのものか、どんなふうに役立ちやすいかを先に整理しています。"
-      />
+  eyebrow="Start here"
+  title="はじめての方へ"
+  description="このページでは、ドーナツメソッドが何を整理するためのものか、どんな方に向いているかを先に確認できます。"
+/>
 
       <section className="page-section">
         <h2>こんなときに向いています</h2>
@@ -36,8 +36,17 @@ export default function StartPage() {
         </div>
       </section>
 
+      <section className="page-section subtle-panel">
+  <h2>ドーナツメソッドの考え方</h2>
+  {methodOverview.paragraphs.map((item) => (
+    <p key={item} className="body-copy">
+      {item}
+    </p>
+  ))}
+</section>
+
       <section className="page-section section-tinted subtle-panel">
-        <h2>この時間で整理しやすくなること</h2>
+        <h2>このセッションで整理しやすいこと</h2>
         <ul className="bullet-list">
           {takeaways.map((item) => (
             <li key={item}>{item}</li>
@@ -51,7 +60,7 @@ export default function StartPage() {
 
       <section className="page-section two-column-grid">
         <div className="info-card">
-          <h2>受け方の目安</h2>
+          <h2>セッション概要</h2>
           <dl className="info-list">
             <div>
               <dt>形態</dt>
@@ -71,7 +80,7 @@ export default function StartPage() {
           </Link>
         </div>
         <div className="soft-card soft-card-strong">
-          <h2>記事や動画から見たい方へ</h2>
+          <h2>まずは記事や動画で知りたい方へ</h2>
           <p>
             まずは note や YouTube から雰囲気を知りたい場合は、「悩みから探す」ページからテーマ別に見られます。
           </p>
