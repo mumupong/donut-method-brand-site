@@ -4,8 +4,6 @@ import { SectionIntro } from "@/components/SectionIntro";
 import { contactText, sessionConfig } from "@/lib/site-data";
 
 export default function ContactPage() {
-  const emailExists = Boolean(sessionConfig.contactEmail);
-
   return (
     <div className="container page-shell">
       <SectionIntro
@@ -16,18 +14,26 @@ export default function ContactPage() {
 
       <section className="page-section two-column-grid">
         <div className="info-card">
-          <h2>お問い合わせ先</h2>
-          {emailExists ? (
-            <>
-              <p className="body-copy">{sessionConfig.contactEmail}</p>
-              <p className="body-muted">{sessionConfig.responseTime}</p>
-            </>
-          ) : (
-            <>
-              <p className="body-copy">{contactText.fallback}</p>
-              <p className="body-muted">{sessionConfig.responseTime}</p>
-            </>
-          )}
+          <h2>お問い合わせ方法</h2>
+          <p className="body-copy">
+            まずはお問い合わせフォームからご連絡ください。
+          </p>
+          <p className="body-muted">
+            {sessionConfig.responseTime}
+            <br />
+            返信が届かない場合は、{sessionConfig.contactEmail} までご連絡ください。
+          </p>
+
+          <div className="button-row button-row-tight">
+            <a
+              href={contactText.formUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="button button-dark"
+            >
+              お問い合わせフォームを開く
+            </a>
+          </div>
         </div>
 
         <div className="info-card">
@@ -39,8 +45,8 @@ export default function ContactPage() {
             <Link href="/sessions" className="button button-light">
               セッション詳細を見る
             </Link>
-            <Link href="/faq" className="button button-dark">
-              FAQ を見る
+            <Link href="/faq" className="button button-light">
+              FAQを見る
             </Link>
           </div>
         </div>
