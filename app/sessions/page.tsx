@@ -2,10 +2,9 @@ import Link from "next/link";
 
 import { FAQList } from "@/components/FAQList";
 import { SectionIntro } from "@/components/SectionIntro";
-import { faqs, sessionConfig, takeaways } from "@/lib/site-data";
+import { contactText, faqs, sessionConfig, takeaways } from "@/lib/site-data";
 
 export default function SessionsPage() {
-  const bookingHref = sessionConfig.bookingUrl || "/contact";
   const emailExists = Boolean(sessionConfig.contactEmail);
 
   return (
@@ -28,7 +27,7 @@ export default function SessionsPage() {
       </section>
 
       <section className="page-section section-tinted subtle-panel">
-        <h2>セッションで持ち帰りやすいこと</h2>
+        <h2>このセッションで整理しやすいこと</h2>
         <ul className="bullet-list">
           {takeaways.map((item) => (
             <li key={item}>{item}</li>
@@ -63,12 +62,22 @@ export default function SessionsPage() {
             ))}
           </ol>
           <div className="button-row button-row-tight">
-            <Link href={bookingHref} className="button button-dark">
-              {sessionConfig.bookingUrl ? sessionConfig.bookingLabel : "お問い合わせへ"}
-            </Link>
-            <Link href="/contact" className="button button-light">
+            <a
+              href={sessionConfig.bookingUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="button button-dark"
+            >
+              {sessionConfig.bookingLabel}
+            </a>
+            <a
+              href={contactText.formUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="button button-light"
+            >
               質問を送る
-            </Link>
+            </a>
           </div>
         </div>
       </section>
