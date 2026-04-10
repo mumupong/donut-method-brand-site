@@ -25,6 +25,14 @@ export const siteMeta = {
     "比較・罪悪感・焦りで『足りない』ばかり見てしまうときに、今ある土台・大切にしたい軸・必要な境界線を整理し、次の一歩を見つけるための1対1セッション。"
 };
 
+export const externalLinks = {
+  contactForm:
+    "https://docs.google.com/forms/d/e/1FAIpQLScG6_3lO2NxvBUwRi0ALPYGNEBMBs1tLwvyHjUFQd-L69OvOQ/viewform",
+  booking:
+    "https://calendar.app.google/BKczqX91TmZ7MXxd6"
+};
+
+
 export const navigation = [
   { href: "/start", label: "はじめての方へ" },
   { href: "/library", label: "悩みから探す" },
@@ -214,32 +222,32 @@ export const profileParagraphs = [
 export const sessionConfig = {
   title: "1対1セッション",
   description:
-    "このセッションは、目標達成のために急いでゴールを決めたり、助言を重ねたりする時間ではありません。今の状態を整理しながら、自分に合う選び方と次の一歩を見つけていく1対1の対話です。",
+    "このセッションは、目標を急いで立てたり、正解を提案したりする時間ではありません。今の状態を整理しながら、自分に合う次の一歩を見つけていく1対1の対話です。",
   suitableFor: [
-    "頑張っているのに、落ち着いて満たされる感覚が少ない",
-    "家事・家庭・仕事・自分のことの両立で、気持ちが追いつかない",
-    "親や周囲の期待が強く、自分の選び方に自信が持てない",
-    "子育ての中で、罪悪感や比較に揺れやすい",
-    "何かを変えたいのに、何から整えればいいかわからない",
-    "目標より先に、今の土台と方向を整えたい"
+    "他の人と比べて落ち込みやすい",
+    "家事・家庭・仕事・自分のことを両立しようとして、いつも何か足りない気がする",
+    "親やまわりの期待を優先してしまい、自分の気持ちが見えにくい",
+    "子育てや暮らしの中で、罪悪感を抱えやすい",
+    "頑張っているのに満たされない",
+    "次の一歩を決めたいが、頭の中が散らかっている"
   ],
-  format: "オンライン（Zoom）",
+  format: "オンライン（Google Meet）",
   duration: "60分",
-  priceLabel: "",
-  priceFallback: "料金は現在最終調整中です。公開時にここへ掲載してください。",
-  bookingUrl: "",
-  bookingLabel: "予約フォームへ",
-  contactEmail: "",
+  priceLabel: "現在準備中",
+  priceFallback: "料金は現在最終調整中です。公開までに掲載予定です。",
+  bookingUrl: "https://calendar.app.google/BKczqX91TmZ7MXxd6",
+  bookingLabel: "予約ページへ進む",
+  contactEmail: "hello@annamiyanishi.com",
   responseTime: "3営業日以内を目安にお返事します。",
   reservationSteps: [
-    "予約フォームから希望日時を選ぶ",
-    "自動返信メールを受け取る",
-    "事前案内を確認する",
-    "当日、Zoom に参加する"
+    "予約ページから希望日時を選ぶ",
+    "予約時にお名前・メールアドレス・事前項目を入力する",
+    "確認メールを受け取る",
+    "当日はGoogle Meetで参加する"
   ],
   cancellationText: [
-    "ご予約の変更・キャンセルについては、公開時にこちらへ掲載してください。",
-    "体調不良ややむを得ない事情がある場合の扱いも、あわせて明記してください。"
+    "ご都合が悪くなった場合は、予約確認メールから変更またはキャンセルをお願いします。",
+    "前日以降の変更が続く場合は、次回以降の日程調整をお願いすることがあります。"
   ]
 };
 
@@ -273,9 +281,11 @@ export const faqs = [
 
 export const contactText = {
   intro:
-    "セッションについてのご質問、取材・掲載のご相談、そのほかのお問い合わせは、こちらからご連絡ください。",
+    "セッションについてのご質問、取材・掲載のご相談、そのほかのお問い合わせはこちらからご連絡ください。",
   fallback:
-    "お問い合わせフォームまたはメールアドレスを、公開時にここへ設定してください。"
+    "お問い合わせフォームまたは hello@annamiyanishi.com までご連絡ください。",
+  formUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLScG6_3lO2NxvBUwRi0ALPYGNEBMBs1tLwvyHjUFQd-L69OvOQ/viewform"
 };
 
 export function getPublishedResources() {
