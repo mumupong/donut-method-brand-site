@@ -201,13 +201,13 @@ export default function HomePage() {
 
       <div className="container bottom-space">
         <CTABox
-          title="今の状態を、ひとつずつ整理していくために"
-          body="まずはセッションの受け方を確認するか、悩みのテーマから note や YouTube を見てみてください。"
-          primaryHref="/sessions"
-          primaryLabel="セッションを見る"
-          secondaryHref="/library"
-          secondaryLabel="悩みから探す"
-        />
+  title="今の状態を、ひとつずつ整理していくために"
+  body="1対1セッションの予約、またはお問い合わせフォームからご連絡いただけます。"
+  primaryHref="/sessions"
+  primaryLabel="セッションを見る"
+  secondaryHref="/contact"
+  secondaryLabel="お問い合わせ"
+/>
       </div>
     </>
   );
