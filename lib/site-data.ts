@@ -137,34 +137,39 @@ export const startOptions = [
 
 export const resourceCategories: ResourceCategory[] = [
   {
-    slug: "comparison",
-    title: "比べてしまうとき",
-    description: "他の人の進み方や選択が気になって、自分を見失いやすいときに。"
-  },
-  {
     slug: "anxiety",
-    title: "不安や焦りが強いとき",
+    title: "不安・焦り",
     description: "このままでいいのか落ち着かず、考えすぎて疲れてしまうときに。"
   },
   {
     slug: "overdoing",
-    title: "頑張りすぎてしまうとき",
+    title: "頑張りすぎ・満たされなさ",
     description: "休んでも気が休まらず、役割や成果で自分を支えようとしてしまうときに。"
   },
   {
-    slug: "relationships",
-    title: "人間関係を整えたいとき",
+    slug: "relationships-family",
+    title: "人間関係・家族",
     description: "親、家族、パートナー、身近な人との距離感や境界線を見直したいときに。"
   },
   {
-    slug: "choices",
-    title: "選び方に迷うとき",
-    description: "仕事、暮らし、学び直し、これからの方向を決めきれないときに。"
+    slug: "work-career",
+    title: "仕事・キャリア",
+    description: "働き方や進み方、今の仕事との向き合い方を整理したいときに。"
   },
   {
-    slug: "home-life",
-    title: "家庭と自分のことを整えたいとき",
-    description: "子育て、家事、家庭のことに追われ、自分の気持ちが後回しになりやすいときに。"
+    slug: "self",
+    title: "自分との関係",
+    description: "自分の気持ちや選び方、自分らしさを見直したいときに。"
+  },
+  {
+    slug: "life-health",
+    title: "心と体・暮らし",
+    description: "子育て、家事、休み方、暮らしの土台を見直したいときに。"
+  },
+  {
+    slug: "creative-book",
+    title: "本づくり・創作",
+    description: "書くことや表現の過程で見えてきた問いをまとめています。"
   }
 ];
 
@@ -190,7 +195,11 @@ export const audienceTags = [
   "仕事・働き方",
   "親・家族",
   "パートナー・近しい関係",
-  "自分のこと"
+  "自分との関係",
+  "お金",
+  "海外移住",
+  "モチベーション",
+  "休み方"
 ] as const;
 
 export const profileSummary = {
@@ -241,17 +250,17 @@ export const sessionConfig = {
   ],
   format: "オンライン（Google Meet）",
   duration: "60分",
-  priceLabel: "現在準備中",
-  priceFallback: "料金は現在最終調整中です。公開までに掲載予定です。",
+  priceLabel: "モニター価格 6,600円（税込）",
+  priceFallback: "通常価格 9,900円（税込）予定",
   priceNote:
-  "現在はモニター価格でご案内しています。セッション後に、簡単なご感想アンケートをお願いする場合があります。",
-  bookingUrl: "https://calendar.app.google/BKczqX91TmZ7MXxd6",
+    "現在はモニター価格でご案内しています。セッション後に、簡単なご感想アンケートをお願いする場合があります。",
+  bookingUrl: externalLinks.booking,
   bookingLabel: "予約ページへ進む",
   contactEmail: "hello@annamiyanishi.com",
   responseTime: "3営業日以内を目安にお返事します。",
   reservationSteps: [
     "予約ページから希望日時を選ぶ",
-    "予約時にお名前・メールアドレス・事前項目を入力する",
+    "お名前・メールアドレス・事前項目を入力する",
     "確認メールを受け取る",
     "当日はGoogle Meetで参加する"
   ],
