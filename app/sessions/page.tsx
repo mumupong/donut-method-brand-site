@@ -1,12 +1,8 @@
-import Link from "next/link";
-
 import { FAQList } from "@/components/FAQList";
 import { SectionIntro } from "@/components/SectionIntro";
 import { contactText, faqs, sessionConfig, takeaways } from "@/lib/site-data";
 
 export default function SessionsPage() {
-  const emailExists = Boolean(sessionConfig.contactEmail);
-
   return (
     <div className="container page-shell">
       <SectionIntro
@@ -27,7 +23,7 @@ export default function SessionsPage() {
       </section>
 
       <section className="page-section section-tinted subtle-panel">
-        <h2>このセッションで整理しやすいこと</h2>
+        <h2>このセッションで整理していくこと</h2>
         <ul className="bullet-list">
           {takeaways.map((item) => (
             <li key={item}>{item}</li>
@@ -49,7 +45,15 @@ export default function SessionsPage() {
             </div>
             <div>
               <dt>料金</dt>
-              <dd>{sessionConfig.priceLabel || sessionConfig.priceFallback}</dd>
+              <dd>{sessionConfig.priceLabel}</dd>
+            </div>
+            <div>
+              <dt>補足</dt>
+              <dd>
+                {sessionConfig.priceNote}
+                <br />
+                {sessionConfig.priceFallback}
+              </dd>
             </div>
           </dl>
         </div>
@@ -85,17 +89,8 @@ export default function SessionsPage() {
       <section className="page-section two-column-grid">
         <div className="info-card">
           <h2>お問い合わせ先</h2>
-          {emailExists ? (
-            <>
-              <p className="body-copy">{sessionConfig.contactEmail}</p>
-              <p className="body-muted">{sessionConfig.responseTime}</p>
-            </>
-          ) : (
-            <>
-              <p className="body-copy">お問い合わせ先は公開時にここへ設定してください。</p>
-              <p className="body-muted">{sessionConfig.responseTime}</p>
-            </>
-          )}
+          <p className="body-copy">{sessionConfig.contactEmail}</p>
+          <p className="body-muted">{sessionConfig.responseTime}</p>
         </div>
 
         <div className="info-card">

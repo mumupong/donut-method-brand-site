@@ -15,9 +15,7 @@ export default function ContactPage() {
       <section className="page-section two-column-grid">
         <div className="info-card">
           <h2>お問い合わせ方法</h2>
-          <p className="body-copy">
-            まずはお問い合わせフォームからご連絡ください。
-          </p>
+          <p className="body-copy">まずはお問い合わせフォームからご連絡ください。</p>
           <p className="body-muted">
             {sessionConfig.responseTime}
             <br />

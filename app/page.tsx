@@ -8,7 +8,6 @@ import {
   faqs,
   hero,
   methodCards,
-  methodOverview,
   painPoints,
   profileSummary,
   resourceCategories,
@@ -53,6 +52,14 @@ export default function HomePage() {
                 <span className="mini-label">時間</span>
                 <strong>{sessionConfig.duration}</strong>
               </div>
+              <div>
+                <span className="mini-label">料金</span>
+                <strong>{sessionConfig.priceLabel}</strong>
+              </div>
+              <div>
+                <span className="mini-label">予約</span>
+                <strong>受付中</strong>
+              </div>
             </div>
           </aside>
         </div>
@@ -78,7 +85,7 @@ export default function HomePage() {
         <div className="container">
           <SectionIntro
             title="このセッションで整理していくこと"
-            description="大きな変化を急ぐためではなく、今の状態に合う見方と動き方を整えるための時間です。"
+            description="大きな答えを急いで出すためではなく、今の状況を整理して、自分に合う次の一歩を見つけるための時間です。"
           />
           <div className="grid-cards grid-5">
             {takeaways.map((item) => (
@@ -93,10 +100,10 @@ export default function HomePage() {
       <section className="section-block">
         <div className="container">
           <SectionIntro
-  eyebrow="Method"
-  title="ドーナツメソッドとは"
-  description={methodOverview.short}
-/>
+            eyebrow="Method"
+            title="ドーナツメソッドとは"
+            description="私は、足りないものばかり見てしまう状態を整理するための見取り図を、ドーナツメソッドと呼んでいます。何かを足して完成するためではなく、今ある土台を見直し、自分にとって大切な軸と必要な境界線を確かめるための方法です。"
+          />
           <div className="grid-cards grid-3">
             {methodCards.map((item) => (
               <article key={item.title} className="method-card">
@@ -111,9 +118,9 @@ export default function HomePage() {
       <section className="section-block section-tinted">
         <div className="container">
           <SectionIntro
-  title="はじめ方"
-  description="まずは、自分に合う方法から選べます。"
-/>
+            title="はじめ方"
+            description="まずは、自分に合う方法から選べます。"
+          />
           <div className="grid-cards grid-3">
             {startOptions.map((item) => (
               <article key={item.title} className="soft-card soft-card-strong">
@@ -131,9 +138,9 @@ export default function HomePage() {
       <section className="section-block">
         <div className="container">
           <SectionIntro
-  title="テーマから探す"
-  description="note と YouTube を、今の悩みや関心に近いテーマ別にまとめています。"
-/>
+            title="テーマから探す"
+            description="note と YouTube を、今の悩みや関心に近いテーマ別にまとめています。"
+          />
           <div className="grid-cards grid-3">
             {resourceCategories.map((item) => (
               <Link key={item.slug} href={`/library/${item.slug}`} className="category-card">
@@ -184,9 +191,10 @@ export default function HomePage() {
               </div>
               <div>
                 <dt>料金</dt>
-                <dd>{sessionConfig.priceLabel || sessionConfig.priceFallback}</dd>
+                <dd>{sessionConfig.priceLabel}</dd>
               </div>
             </dl>
+            <p className="body-muted">{sessionConfig.priceNote}</p>
             <Link href="/sessions" className="text-link">
               詳細を見る
             </Link>
@@ -201,13 +209,13 @@ export default function HomePage() {
 
       <div className="container bottom-space">
         <CTABox
-  title="今の状態を、ひとつずつ整理していくために"
-  body="1対1セッションの予約、またはお問い合わせフォームからご連絡いただけます。"
-  primaryHref="/sessions"
-  primaryLabel="セッションを見る"
-  secondaryHref="/contact"
-  secondaryLabel="お問い合わせ"
-/>
+          title="今の状態を、ひとつずつ整理していくために"
+          body="1対1セッションの予約、またはお問い合わせフォームからご連絡いただけます。"
+          primaryHref="/sessions"
+          primaryLabel="セッションを見る"
+          secondaryHref="/contact"
+          secondaryLabel="お問い合わせ"
+        />
       </div>
     </>
   );
