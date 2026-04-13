@@ -42,12 +42,13 @@ export const externalLinks = {
 
 export const navigation = [
   { href: "/start", label: "はじめての方へ" },
-  { href: "/library", label: "悩みから探す" },
+  { href: "/library", label: "テーマから探す" },
   { href: "/sessions", label: "セッション" },
   { href: "/profile", label: "プロフィール" },
-  { href: "/faq", label: "よくある質問" },
   { href: "/contact", label: "お問い合わせ" }
 ] as const;
+
+
 
 export const hero = {
   eyebrow: "ドーナツメソッド",
