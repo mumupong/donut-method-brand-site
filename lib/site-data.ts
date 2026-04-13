@@ -32,6 +32,13 @@ export const externalLinks = {
     "https://calendar.app.google/BKczqX91TmZ7MXxd6"
 };
 
+export const externalLinks = {
+  contactForm:
+    "https://docs.google.com/forms/d/e/1FAIpQLScG6_3lO2NxvBUwRi0ALPYGNEBMBs1tLwvyHjUFQd-L69OvOQ/viewform",
+  booking:
+    "https://calendar.app.google/BKczqX91TmZ7MXxd6"
+};
+
 
 export const navigation = [
   { href: "/start", label: "はじめての方へ" },
