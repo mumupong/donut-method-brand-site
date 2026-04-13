@@ -235,6 +235,8 @@ export const sessionConfig = {
   duration: "60分",
   priceLabel: "現在準備中",
   priceFallback: "料金は現在最終調整中です。公開までに掲載予定です。",
+  priceNote:
+  "現在はモニター価格でご案内しています。セッション後に、簡単なご感想アンケートをお願いする場合があります。",
   bookingUrl: "https://calendar.app.google/BKczqX91TmZ7MXxd6",
   bookingLabel: "予約ページへ進む",
   contactEmail: "hello@annamiyanishi.com",
